@@ -1,0 +1,9 @@
+<h1 xmlns="http://www.w3.org/1999/html">This is an index page.</h1>
+
+{% for post in posts %}
+    <div>
+        <h3><a href="/post/{{ post.slug }}">{{ post.title }}</a></h3>
+        <p>{{ post.summary }}</p>
+    </div>
+
+{% endfor %}
