@@ -1,4 +1,8 @@
-<h1 xmlns="http://www.w3.org/1999/html">This is an index page.</h1>
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<h1>This is an index page.</h1>
 
 {% for post in posts %}
     <div>
