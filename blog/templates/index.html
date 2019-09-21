@@ -1,13 +1,12 @@
-{% load bootstrap4 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
+{% extends 'base.html' %}
 <h1>This is an index page.</h1>
+{% block content %}
+    {% for post in posts %}
+        <br /> <br />
+        <div>
+            <h3><a href="/post/{{ post.slug }}">{{ post.title }}</a></h3>
+            <p>{{ post.summary }}</p>
+        </div>
 
-{% for post in posts %}
-    <div>
-        <h3><a href="/post/{{ post.slug }}">{{ post.title }}</a></h3>
-        <p>{{ post.summary }}</p>
-    </div>
-
-{% endfor %}
+    {% endfor %}
+{% endblock %}
