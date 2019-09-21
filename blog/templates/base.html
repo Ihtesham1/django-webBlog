@@ -38,11 +38,13 @@
     </ul>
   </div>
 </nav>
-
-</body>
+    <div id="header">
+        {% block header %}{% endblock %}
+    </div>
     <div id="content">
         {% block content %}
             This is a fall back text
         {% endblock %}
     </div>
+</body>
 </html>

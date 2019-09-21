@@ -7,13 +7,15 @@ from .models import Post
 
 def index(requests):
     posts = Post.objects.all()
-    return render(requests, 'index.html', {'posts': posts   })
+    return render(requests, 'index.html', {'posts': posts})
 
 
 def post(requests, slug):
     print(slug)
+    posts = Post.objects.all()
     return render_to_response('post.html', {
-        'post': get_object_or_404(Post, slug=slug)
+        'post': get_object_or_404(Post, slug=slug),
+        'posts':posts
     })
 
 
